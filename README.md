@@ -23,7 +23,7 @@ console.log(lastName);
 ```
 In this example, `customer` is checked for `null` or `undefined`. Since it is not, the execution of the chain will continue and check lastName for `null` or `undefined`. Here since lastName is not set, it is `undefined`, the optional chain will return immediately  `undefined` without continuing the execution ( `toUpperCase()` will not be called) and the console output will be 'undefined'
 
-## Now let's the coolness of this feature.
+## Now let's see the coolness of this feature.
 The following codes are the equivalent of Example #1
  Equivalent Code #1 
 ```typescript
