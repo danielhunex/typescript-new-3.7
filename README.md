@@ -46,7 +46,7 @@ How many places we use the `&&` to check `null` and `undefined`? so Generally sp
 ### <span style="color:red">CAUTION</span> 
 There is a difference between `&&` and `?.` and proceed with caution 
 
-`&&` evaluates falsy values such as `empty`, `0`, `false`, and `NaN`. However, if `?.` halts the chain and returns `undefined` if only encountered with `null` or `undefined`. It does not return or stop execution if encountered valid values such as `0` or `empty`
+`&&` evaluates falsey values such as `empty`, `0`, `false`, and `NaN`. However, if `?.` halts the chain and returns `undefined` if only encountered with `null` or `undefined`. It does not return or stop execution if encountered valid values such as `0` or `empty`
 
 Example #3 
 ```typescript
@@ -127,7 +127,7 @@ In the code snippet above, the first console log results in 'Daniel, What's up!'
 
 ### <span style="color:red">CAUTION</span> 
 
-`??` can be used to replace `||`. However, `||` acts on falsy values such as empty (`""`), `undefined`, `0`, `NaN`. `??` acts on `undefined` or `null`.
+`??` can be used to replace `||`. However, `||` acts on falsey values such as empty (`""`), `undefined`, `0`, `NaN`. `??` acts on `undefined` or `null`.
 
 Example #7
 
@@ -150,6 +150,6 @@ const speedCorrect  =currentSpeed + (speedBy ?? defaultSpeedBy) //10
 
 ```
 
-In the example, when `speedBy` is `undefined` both `||` and `??` give correct results. However, when `speedBy` is set to 0, `||` 0 is falsy value and results in wrong result 30 (`newSpeedWrong`). To avoid such erros, you can use `??` (`speedCorrect`)
+In the example, when `speedBy` is `undefined` both `||` and `??` give correct results. However, when `speedBy` is set to 0, `||` 0 is falsey value and results in wrong result 30 (`newSpeedWrong`). To avoid such erros, you can use `??` (`speedCorrect`)
 
  Kudos to optional chaining and nullish coalescing.
